@@ -1,15 +1,4 @@
-Create database TWS
 use TWS;
-
---Drop Table Rescues;
---Drop Table Management;
---Drop Table Public;
---Drop Table Projects;
---Drop Table Events;
---Drop Table EventPublicData;
---Drop Table RescuePublicData;
---Drop Table sponsorData;
---Drop Table fosterData;
 
 
 Create Table Rescues(Rescue_ID int AUTO_INCREMENT primary key,Animal char(3) not NULL check(Animal like'Cat' OR Animal like 'Dog') ,Name varchar(20) not NULL,Gender char(6) not NULL check(Gender like'Male' OR Gender like 'Female') ,Age varchar(20),Sterile char(3) not NULL check(Sterile like'Yes' OR Sterile like 'No') ,Vac_status char(3) not NULL check( Vac_status like'Yes' OR  Vac_status like 'No'),Status varchar(20),rescued_Date Date);
@@ -42,4 +31,3 @@ insert into Events (Event_Name,Venue,Event_Date,aboutEvent) VALUES('Halloween','
 insert into Events (Event_Name,Venue,Event_Date,aboutEvent) VALUES('Birthday Party','Shelter','2023-07-03','Birthday Party for fundrasing');
 
 insert into Management (First_Name,Second_Name,Gender,DOB,CNIC,Designation,Phone,Pass) VALUES('admin','admin','Male','2001-12-02','11111-1111111-1','Admin','03000000','123');
-S
